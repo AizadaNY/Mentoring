@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Methods {
@@ -64,5 +65,21 @@ public class Methods {
 //
 //
 //    }
+
+    public static void getNxM_matrix(int row,int column){
+        Random random=new Random();
+        List<Integer> listOfRandomNumbers=new ArrayList<>();
+        for (int i = 0; i < row; i++) {
+            listOfRandomNumbers.clear();
+            for (int j = 0; j <column; j++) {
+                listOfRandomNumbers.add(random.nextInt(100));
+            }
+            System.out.println(listOfRandomNumbers.toString().
+                    replace("[", "").replace("]",""));
+        }
+    }
+
+
+
 
 }
