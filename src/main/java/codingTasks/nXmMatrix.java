@@ -1,3 +1,5 @@
+package codingTasks;
+
 import javax.swing.text.TabableView;
 import java.util.*;
 

@@ -1,3 +1,5 @@
+package codingTasks;
+
 import org.junit.Test;
 
 public class FibonacciNumber {
