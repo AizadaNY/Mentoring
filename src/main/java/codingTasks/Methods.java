@@ -37,11 +37,12 @@ public class Methods {
             list.add(fibNumber);
 
         }
-        if (number == 0) {
+        if (number <= 0) {
             System.out.println("No data to show based on your request");
         } else if (number == 1) {
             System.out.println("List of fibonacci numbers based on your request: " + list.get(0));
-        } else {
+        }
+        else {
             System.out.println("List of fibonacci numbers based on your request: " + list);
         }
 
