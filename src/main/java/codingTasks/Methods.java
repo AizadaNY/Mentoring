@@ -1,9 +1,6 @@
 package codingTasks;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Methods {
     //user provides any number
@@ -81,6 +78,34 @@ public class Methods {
                     replace("[", "").replace("]",""));
         }
     }
+
+    public static void putValueToTheMultidimensionalArray(int row,int column,String value,String[][] arr){
+
+
+                 if(arr[row][column].trim().toUpperCase()!="O"||arr[row][column].trim().toUpperCase()!="X"){
+                    arr[row][column]=value;
+                 }else{
+                    System.out.println("Cell already occupied.Select different location");
+                }
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(Arrays.toString(arr[i]).toString());
+        } }
+
+        public static void searchingValue(String value,int row, int column,String[][] arr){
+            for (row = 0; row < arr.length; row++) {
+                for (column = 0; column< arr[row].length; row++) {
+                  if((arr[row][column]==value)||(arr[row][column].contains(value))){
+                      System.out.println("Cell already occupied");
+                  }else{
+                      arr[row][column]=value;
+                      System.out.println("Value inserted");
+                      return;
+                  }
+                }
+            }
+        }
+
+
 
 
 
