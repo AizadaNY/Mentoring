@@ -1,11 +1,30 @@
 package codingTasks;
 
+import java.util.Arrays;
+
 public class test {
 
+
+    public static int[] middle(int[] array) {
+
+           if(array.length<=2){
+               return new int[0];
+           }else{
+              int[] middleArray=new int[array.length-2] ;
+              int index=1;
+              while (index<=middleArray.length){
+                  middleArray[index-1]=array[index];
+                  index++;
+              }
+               return middleArray;
+           }
+
+            }
+
     public static void main(String[] args) {
-
-        String[][] arr = {{"","",""},{"","",""},{"","",""}};
-        System.out.println(arr[0][0].isEmpty());
-
+        int[] myArray={1,2,3,4};
+        int [] middleArray=test.middle(myArray);
+        System.out.println(Arrays.toString(middleArray));
     }
+
 }

@@ -40,31 +40,32 @@ public class Methods {
             System.out.println("List of fibonacci numbers based on your request: " + list.get(0));
         }
         else {
-            System.out.println("List of fibonacci numbers based on your request: " + list);
+            System.out.println("List of fibonacci numbers loop: " + list);
         }
 
     }
 
-//    public static void getFibonacciNumberUsingRecursion(int number){
-//
-//        List<Integer> list = new ArrayList<>();
-//        list.add(0);
-//        list.add(1);
-//        if(number<=1)
-//         return   System.out.println("List of fibonacci numbers based on your request: " + list.get(0));
-//        else
-//            int lastNum =list.get(list.size()-1);
-//            int secondLastNum =list.get(list.size() - 2);
-//            int fibNumber = lastNum + secondLastNum;
-//            list.add(fibNumber);
-//        System.out.println("List of fibonacci numbers based on your request: " + list);
-//
-//        getFibonacciNumberUsingRecursion(number);
-//
-//
-//
-//
-//    }
+    //Identify recursive case
+    // n;n+1;(n+1)+
+
+    public static List<Integer> getFibonacciNumberUsingRecursion(int countOfNumbers){
+
+        List<Integer> list = new ArrayList<>();
+        list.add(0);
+        list.add(1);
+        if(countOfNumbers<=2){
+            return list;
+        }else {
+            list=getFibonacciNumberUsingRecursion(countOfNumbers-1);
+            int value=list.get(list.size()-1)+list.get(list.size()-2);
+            list.add(value);
+
+
+            return list;
+
+        }
+
+    }
 
     public static void getNxM_matrix(int row,int column){
         Random random=new Random();
