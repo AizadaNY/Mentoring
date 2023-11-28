@@ -45,6 +45,10 @@ public class Methods {
 
     }
 
+    //Time complexity On-->O1
+
+    //Big o
+
     //Identify recursive case
     // n;n+1;(n+1)+
 
