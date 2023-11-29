@@ -25,7 +25,8 @@ public class nXmMatrix {
             input2 = scanner.nextLine().toLowerCase(Locale.ROOT);
             if (input2.contains("quit")) {
                 System.out.println("Exit");
-                break; }
+                break;
+            }
             try {
                 rowNumber = Integer.parseInt(input1);
                 columnNumber = Integer.parseInt(input2);
