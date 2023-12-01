@@ -1,4 +1,4 @@
-package javaLearningCode.Arrays;
+package udemyLearningCode.arrays;
 
 import java.util.Arrays;
 

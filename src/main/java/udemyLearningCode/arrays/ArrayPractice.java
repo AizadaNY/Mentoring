@@ -1,4 +1,4 @@
-package javaLearningCode.Arrays;
+package udemyLearningCode.arrays;
 
 public class ArrayPractice {
 

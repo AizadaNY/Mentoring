@@ -13,11 +13,13 @@ public class TicTacToeGame {
         boolean isFull = false;
         boolean userWon = false;
         isFull=TicTacToeGame.isTableFull(table);
-        userWon=TicTacToeGame.gameResult(table);
+
         while (!isFull||!userWon) {
             Scanner input = new Scanner(System.in);
             TicTacToeGame.getUser1Input(input, table);
+            userWon=TicTacToeGame.gameResult(table);
             TicTacToeGame.getUser2Input(input, table);
+            userWon=TicTacToeGame.gameResult(table);
         }
     }
 
