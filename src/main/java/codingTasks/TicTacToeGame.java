@@ -8,44 +8,26 @@ import java.util.Scanner;
 public class TicTacToeGame {
 
     public static void main(String[] args) {
-//        Table table=new Table(3,3);
+
         String[][] table = {{"", "", ""}, {"", "", ""}, {"", "", ""}};
+        User user1=new User("User1", "X");
+        User user2=new User("User2", "O");
         boolean isFull = false;
         boolean userWon = false;
-        isFull=TicTacToeGame.isTableFull(table);
 
+        Scanner scanner = new Scanner(System.in);
         while (!isFull||!userWon) {
-            Scanner input = new Scanner(System.in);
-            TicTacToeGame.getUser1Input(input, table);
+            user1.userMove(table, scanner);
+            isFull=TicTacToeGame.isTableFull(table);
             userWon=TicTacToeGame.gameResult(table);
-            TicTacToeGame.getUser2Input(input, table);
+            user2.userMove(table,scanner);
             userWon=TicTacToeGame.gameResult(table);
+            isFull=TicTacToeGame.isTableFull(table);
         }
     }
 
-    public static void getUser1Input(Scanner input, String[][] table) {
-        System.out.println("User 1:Insert location of the cell");
-        System.out.println("Insert row number");
-        int row = input.nextInt();
-        System.out.println("Column number");
-        int column = input.nextInt();
-        table[row][column] = "X";
-        for (int a = 0; a < table.length; a++) {
-            System.out.println(Arrays.toString(table[a]));
-        }
-    }
 
-    public static void getUser2Input(Scanner input, String[][] table) {
-        System.out.println("User 2:Insert location of the cell");
-        System.out.println("Insert row number");
-        int row2 = input.nextInt();
-        System.out.println("Column number");
-        int column2 = input.nextInt();
-        table[row2][column2] = "O";
-        for (int a = 0; a < table.length; a++) {
-            System.out.println(Arrays.toString(table[a]));
-        }
-    }
+
 
     public static boolean isTableFull(String[][] array) {
         boolean tableStatus=false;

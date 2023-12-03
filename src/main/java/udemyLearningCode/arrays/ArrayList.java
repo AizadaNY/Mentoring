@@ -19,4 +19,9 @@ public class ArrayList {
             String value= iterator.next();
             System.out.println(value);
         }
-    }}
+
+
+    }
+
+
+}
