@@ -2,7 +2,7 @@ package codingTasks;
 
 import java.util.Arrays;
 
-public class test {
+public class Test {
 
 
     public static int[] middle(int[] array) {
@@ -23,7 +23,7 @@ public class test {
 
     public static void main(String[] args) {
         int[] myArray={1,2,3,4};
-        int [] middleArray=test.middle(myArray);
+        int [] middleArray= Test.middle(myArray);
         System.out.println(Arrays.toString(middleArray));
     }
 

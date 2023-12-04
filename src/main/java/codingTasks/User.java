@@ -7,48 +7,60 @@ import java.util.Scanner;
 public class User {
     public String userName;
     public String sign;
+    public boolean cellOccupied = false;
 
     User(String userName, String sign) {
         this.userName = userName;
         this.sign = sign;
     }
 
-    int row;
-    int column;
-
-    public void getUserInput(Scanner input) {
+    public int getUserRowNumber(Scanner input) {
         System.out.println(this.userName + " Insert location of the cell");
         System.out.println("Insert row number");
-        row = input.nextInt();
-        System.out.println("Column number");
-        column = input.nextInt();
+        return input.nextInt();
     }
 
-    public void putValueToTheMultidimensionalArray(int row, int column, String value, String[][] arr, Scanner scanner) {
-        String opponentSign = "";
-        if (this.sign.equals("X")) {
-            opponentSign = "O";
-        } else if (this.sign.equals("O")) {
-            opponentSign = "X";
-        }
+    public int getUserColumnNumber(Scanner input) {
+        System.out.println("Column number");
+        return input.nextInt();
+    }
 
-        if (arr[row][column].trim().toUpperCase() != this.sign || arr[row][column].trim().toUpperCase() != opponentSign) {
+    public boolean isCellEmpty(String value, String[][] arr, Scanner scanner) {
+        int row = getUserRowNumber(scanner);
+        int column = getUserColumnNumber(scanner);
+        if (arr[row][column].isEmpty()) {
             arr[row][column] = value;
+          return arr[row][column].isEmpty();
         } else {
             System.out.println("Cell already occupied.Select different location");
-            getUserInput(scanner);
+            cellOccupied = true;
         }
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(Arrays.toString(arr[i]));
-        }
-
+       return cellOccupied;
     }
+//    public void putValueToTheMultidimensionalArray(String value, String[][] arr, Scanner scanner) {
+//        int row=getUserRowNumber(scanner);
+//        int column=getUserColumnNumber(scanner);
+//        if (arr[row][column].isEmpty()) {
+//            arr[row][column] = value;
+//        } else {
+//            System.out.println("Cell already occupied.Select different location");
+//            getUserRowNumber(scanner);
+//            getUserColumnNumber(scanner);
+//        }
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.println(Arrays.toString(arr[i]));
+//        }
+//
+//    }
 
-    public void userMove(String[][] arr, Scanner scanner) {
-        getUserInput(scanner);
-        putValueToTheMultidimensionalArray(row, column, this.sign, arr, scanner);
-    }
-
+//    public void move(String[][] arr, Scanner scanner) {
+//        do {
+//            int row=getUserRowNumber(scanner);
+//            int column=getUserColumnNumber(scanner);
+//        }while (isCellEmpty())
+//        }
+//    }
 
 }
+
 

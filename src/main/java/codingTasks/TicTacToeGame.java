@@ -13,27 +13,33 @@ public class TicTacToeGame {
         User user1=new User("User1", "X");
         User user2=new User("User2", "O");
         boolean isFull = false;
-        boolean userWon = false;
+        boolean isUserWon = false;
 
-        Scanner scanner = new Scanner(System.in);
-        while (!isFull||!userWon) {
-            user1.userMove(table, scanner);
-            isFull=TicTacToeGame.isTableFull(table);
-            userWon=TicTacToeGame.gameResult(table);
-            user2.userMove(table,scanner);
-            userWon=TicTacToeGame.gameResult(table);
-            isFull=TicTacToeGame.isTableFull(table);
-        }
+//        Scanner scanner = new Scanner(System.in);
+//        while (!isFull) {
+//            user1.move(table, scanner);
+////          isUserWon=TicTacToeGame.gameResult(table);
+//            isFull=TicTacToeGame.isTableFull(table);
+//            user2.move(table, scanner);
+////          isUserWon=TicTacToeGame.gameResult(table);
+//            isFull=TicTacToeGame.isTableFull(table);
+//        }
     }
 
 
 
 
     public static boolean isTableFull(String[][] array) {
+        List<Boolean> cellStatus=null;
         boolean tableStatus=false;
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
-                tableStatus=!(array[i][j].isEmpty());
+                if(array[i][j].isEmpty()){
+                    break;
+                }
+                else if(!array[i][j].isEmpty()) {
+                    tableStatus=true;
+                }
             }
         }
         return tableStatus;

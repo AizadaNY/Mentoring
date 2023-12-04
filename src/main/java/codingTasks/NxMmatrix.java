@@ -3,7 +3,7 @@ package codingTasks;
 import javax.swing.text.TabableView;
 import java.util.*;
 
-public class nXmMatrix {
+public class NxMmatrix {
 
 
     public static void main(String[] args) {

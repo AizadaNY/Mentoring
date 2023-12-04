@@ -44,22 +44,21 @@ public class Methods {
     }
 
     public static List<Integer> getFibonacciNumberUsingRecursion(int countOfNumbers) {
-
         List<Integer> list = new ArrayList<>();
         list.add(0);
         list.add(1);
-        if (countOfNumbers <= 2) {
+        if (countOfNumbers <= 2 && countOfNumbers > 0) {
             return list;
+        } else if (countOfNumbers <= 0) {
+            System.out.println("No data to show based on your request");
         } else {
             list = getFibonacciNumberUsingRecursion(countOfNumbers - 1);
             int value = list.get(list.size() - 1) + list.get(list.size() - 2);
             list.add(value);
-
-
             return list;
 
         }
-
+        return list;
     }
 
     public static void getNxM_matrix(int row, int column) {
@@ -76,7 +75,6 @@ public class Methods {
     }
 
 
-
     public static void searchingValue(String value, int row, int column, String[][] arr) {
         for (row = 0; row < arr.length; row++) {
             for (column = 0; column < arr[row].length; row++) {
@@ -89,6 +87,45 @@ public class Methods {
                 }
             }
         }
+    }
+
+    public static void linkedListFibonacciNumbers(int size) {
+        LinkedList<Integer> list = new LinkedList<>();
+        list.add(0);
+        list.add(1);
+        for (int i = 2; i < size; i++) {
+            int lastNum = list.get(list.size() - 1);
+            int secondLastNum = list.get(list.size() - 2);
+            int fibNumber = lastNum + secondLastNum;
+            list.add(fibNumber);
+
+        }
+        if (size <= 0) {
+            System.out.println("No data to show based on your request");
+        } else if (size == 1) {
+            System.out.println("List of fibonacci numbers based on your request: " + list.get(0));
+        } else {
+            System.out.println("List of fibonacci numbers LinkedList: " + list);
+        }
+    }
+
+    public static LinkedList<Integer> getFibonacciNumberUsingRecursionLinkedList(int numbers) {
+        LinkedList<Integer> list = new LinkedList<>();
+        list.add(0);
+        list.add(1);
+        if (numbers <= 2 && numbers > 0) {
+            return list;
+        } else if (numbers <= 0) {
+            System.out.println("No data to show based on your request");
+        } else {
+            list = getFibonacciNumberUsingRecursionLinkedList(numbers - 1);
+            int value = list.get(list.size() - 1) + list.get(list.size() - 2);
+            list.add(value);
+            return list;
+
+        }
+        System.out.println("Recursion Linked List " + list);
+        return list;
     }
 
 
