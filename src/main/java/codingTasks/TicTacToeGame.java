@@ -10,43 +10,45 @@ public class TicTacToeGame {
     public static void main(String[] args) {
 
         String[][] table = {{"", "", ""}, {"", "", ""}, {"", "", ""}};
-        User user1=new User("User1", "X");
-        User user2=new User("User2", "O");
+        User user1 = new User("User1", "X");
+        User user2 = new User("User2", "O");
         boolean isFull = false;
         boolean isUserWon = false;
 
-//        Scanner scanner = new Scanner(System.in);
-//        while (!isFull) {
-//            user1.move(table, scanner);
-////          isUserWon=TicTacToeGame.gameResult(table);
-//            isFull=TicTacToeGame.isTableFull(table);
-//            user2.move(table, scanner);
-////          isUserWon=TicTacToeGame.gameResult(table);
-//            isFull=TicTacToeGame.isTableFull(table);
-//        }
+        Scanner scanner = new Scanner(System.in);
+        while (!isFull) {
+            user1.userMoveOnTable(user1.sign, table, scanner);
+           isUserWon = TicTacToeGame.gameResult(table);
+            isFull = TicTacToeGame.isTableFull(table);
+            user2.userMoveOnTable(user2.sign, table, scanner);
+           isUserWon = TicTacToeGame.gameResult(table);
+            isFull = TicTacToeGame.isTableFull(table);
+        }
     }
 
 
-
-
     public static boolean isTableFull(String[][] array) {
-        List<Boolean> cellStatus=null;
-        boolean tableStatus=false;
+        List<Boolean> tableStatusList = null;
+        boolean tableStatus = false;
         for (int i = 0; i < array.length; i++) {
+            boolean cellStatus = false;
             for (int j = 0; j < array[i].length; j++) {
-                if(array[i][j].isEmpty()){
-                    break;
-                }
-                else if(!array[i][j].isEmpty()) {
-                    tableStatus=true;
-                }
+                if(!array[i][j].isEmpty()){
+                    cellStatus=true;
+                    tableStatusList.add(cellStatus);
+                }else
+                    return false;
             }
+        }
+
+        if(tableStatusList.size()==9){
+            tableStatus=true;
         }
         return tableStatus;
     }
 
     public static boolean gameResult(String[][] table) {
-        boolean gameResult=false;
+        boolean gameResult = false;
         List<String> rowValues = new ArrayList<>();
         List<String> columnValues = new ArrayList<>();
         List<String> dioValues1 = new ArrayList<>();
@@ -79,5 +81,8 @@ public class TicTacToeGame {
         return gameResult;
     }
 
-
 }
+
+
+
+
