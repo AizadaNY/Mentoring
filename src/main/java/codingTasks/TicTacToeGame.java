@@ -16,13 +16,13 @@ public class TicTacToeGame {
         boolean isUserWon = false;
 
         Scanner scanner = new Scanner(System.in);
-        while (!isFull) {
+        while (!isUserWon) {
             user1.userMoveOnTable(user1.sign, table, scanner);
-           isUserWon = TicTacToeGame.gameResult(table);
-            isFull = TicTacToeGame.isTableFull(table);
+//           isUserWon = TicTacToeGame.gameResult(table);
+//            isFull = TicTacToeGame.isTableFull(table);
             user2.userMoveOnTable(user2.sign, table, scanner);
-           isUserWon = TicTacToeGame.gameResult(table);
-            isFull = TicTacToeGame.isTableFull(table);
+//           isUserWon = TicTacToeGame.gameResult(table);
+//            isFull = TicTacToeGame.isTableFull(table);
         }
     }
 
