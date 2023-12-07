@@ -20,21 +20,7 @@ public class SingleLinkedList {
     Space complexity is O(1)
      */
 
-    public void fibonacciNumber(int sizeOfList) {
-         // created head with value null
 
-        int nodevalue=0;
-        int nextNodeValue=1;
-
-        createSingleLinkedList(nodevalue);
-        Node node1=head;
-        for (int i = 2; i < sizeOfList; i++) {
-
-            node1.next.value=nextNodeValue;
-            nextNodeValue+=nextNodeValue;
-            System.out.println(nodevalue+ ",");
-        }
-    }
 
 
 }

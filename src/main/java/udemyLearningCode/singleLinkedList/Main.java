@@ -7,11 +7,7 @@ public class Main {
         SingleLinkedList sLl=new SingleLinkedList();
         sLl.createSingleLinkedList(0);
 
-        Scanner scanner=new Scanner(System.in);
-        System.out.println("Fibonacci number size");
-        int fibbonaciListSize=scanner.nextInt();
 
-        sLl.fibonacciNumber(fibbonaciListSize);
 
 
 
