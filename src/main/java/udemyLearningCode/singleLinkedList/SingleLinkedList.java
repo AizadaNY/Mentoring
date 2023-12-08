@@ -21,6 +21,33 @@ public class SingleLinkedList {
      */
 
 
+    public void insertLinkedList(int nodeValue, int location){
+
+        Node node=new Node();
+        node.value=nodeValue;
+        if(head==null){
+            createSingleLinkedList(nodeValue);
+        }else if(location==0){
+            node.next=head;
+            head=node;
+
+        }else if(location>=size){
+            node.next=null;
+            tail.next= node;
+            tail=node;
+        }else {
+            Node tempNode=head;
+            int index=0;
+            while (index<location-1){
+                tempNode=tempNode.next;
+                index++;
+            }
+        }
+        }
+
+    }
 
 
-}
+
+
+
