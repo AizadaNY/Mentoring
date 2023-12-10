@@ -47,6 +47,9 @@ public class CircularSinglyLinkedList {
         }
     }
 
+    public void traverseSLL(){
+
+    }
 
 
 }

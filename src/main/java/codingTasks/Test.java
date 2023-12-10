@@ -1,6 +1,7 @@
 package codingTasks;
 
 import java.util.Arrays;
+import java.util.LinkedList;
 
 public class Test {
 
@@ -26,5 +27,7 @@ public class Test {
         int [] middleArray= Test.middle(myArray);
         System.out.println(Arrays.toString(middleArray));
     }
+
+
 
 }
