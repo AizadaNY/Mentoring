@@ -1,5 +1,10 @@
 package udemyLearningCode.singleLinkedList;
 
+import udemyLearningCode.doubleLinkedList.DoublyLinkedList;
+import udemyLearningCode.doubleLinkedList.DoublyNode;
+
+import java.util.Scanner;
+
 public class SingleLinkedList {
     public Node head;
     public Node tail;
@@ -44,6 +49,20 @@ public class SingleLinkedList {
             }
         }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 

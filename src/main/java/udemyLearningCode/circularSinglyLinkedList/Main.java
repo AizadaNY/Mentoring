@@ -6,8 +6,11 @@ public class Main {
 
         CircularSinglyLinkedList cSlL=new CircularSinglyLinkedList();
         cSlL.createCSLL(10);
+        cSlL.insertCSll(12, 0);
+        cSlL.insertCSll(11, 3);
+        cSlL.insertCSll(15, 4);
+        System.out.println(cSlL.head.value);
+        cSlL.traverseSLL();
 
-        cSlL.insertCSll(12, 2);
-        System.out.println(cSlL.head.next.value);
     }
 }
