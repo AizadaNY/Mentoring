@@ -48,6 +48,59 @@ public class DoublyLinkedList {
         size++;
     }
 
+    public void traverseDlL(){
+        if(head!=null){
+            DoublyNode tempNode=head;
+            for (int i = 0; i < size; i++) {
+                System.out.print(tempNode.value);
+                if(i<size-1){
+                    System.out.print("-->");
+                }
+                tempNode=tempNode.next;
+            }
+        }else{
+            System.out.println("Doubly linked list doesn't exist");
+        }
+        System.out.print("\n");
+    }
+
+    public void reverseTraverse(){
+        if(head!=null){
+            DoublyNode tempNode=tail;
+            for (int i = 0; i < size; i++) {
+                System.out.print(tempNode.value);
+                if(i<size-1){
+                    System.out.print("-->");
+                }
+                tempNode= tempNode.prev;
+            }
+
+        }else{
+            System.out.print("DlL doesn't exist!");
+        }
+        System.out.print("\n");
+    }
+
+    public boolean searchNode(int value) {
+
+        if (head != null) {
+            DoublyNode tempNode = head;
+            for (int i = 0; i < size; i++) {
+                if (tempNode.value == value) {
+                    System.out.print("The node is fount at location " + i);
+                    return true;
+                }
+                tempNode = tempNode.next;
+            }
+
+        }
+        System.out.print("Node "+value+ " not found");
+        return false;
+
+    }
+
+
+
 
 
 }

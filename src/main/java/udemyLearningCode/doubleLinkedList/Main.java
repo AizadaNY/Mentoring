@@ -11,5 +11,9 @@ public class Main {
         dLl.insertDlL(8, 1);
         dLl.insertDlL(2, 6);
 
+        dLl.traverseDlL();
+        dLl.reverseTraverse();
+        dLl.searchNode(7);
+
     }
 }
