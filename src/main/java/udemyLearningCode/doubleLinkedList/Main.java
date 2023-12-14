@@ -12,8 +12,12 @@ public class Main {
         dLl.insertDlL(2, 6);
 
         dLl.traverseDlL();
-        dLl.reverseTraverse();
-        dLl.searchNode(7);
+//        dLl.reverseTraverse();
+//        dLl.searchNode(7);
+//        dLl.deleteNodeDlL(2);
+//        dLl.traverseDlL();
+        dLl.deleteEntireDlL();
+        dLl.traverseDlL();
 
     }
 }

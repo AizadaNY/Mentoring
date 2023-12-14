@@ -2,7 +2,7 @@ package udemyLearningCode.arrays;
 
 import java.util.Arrays;
 
-public class arraysClass {
+public class ArraysClass {
 
     public static void main(String[] args) {
         // 1 Dimensional array

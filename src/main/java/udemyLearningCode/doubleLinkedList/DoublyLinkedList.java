@@ -99,6 +99,59 @@ public class DoublyLinkedList {
 
     }
 
+    public void deleteNodeDlL(int location){
+
+        if(head==null){
+            System.out.print("Double linked list doesn't exist");
+            return;
+        }else if(location==0){
+            if(size==1){
+               head=null;
+               tail=null;
+               size--;
+               return;
+            }else{
+               head=head.next;
+               head.prev=null;
+               size--;
+            }
+        }else if(location==size){
+            DoublyNode tempNode=tail.prev;
+            if(size==1){
+                head=null;
+                tail=null;
+                size--;
+                return;
+            }else {
+                tempNode.next=null;
+                tail=tempNode;
+                size--;
+            }
+        }else{
+            DoublyNode tempNode=head;
+            for (int i = 0; i < location-1; i++) {
+                tempNode=tempNode.next;
+            }
+            tempNode.next=tempNode.next.next;
+            tempNode.next.prev=tempNode;
+            size--;
+        }
+    }
+
+    //delete entire DlL
+
+    public void deleteEntireDlL(){
+        DoublyNode tempNode=head;
+        for (int i = 0; i < size; i++) {
+            tempNode.prev=null;
+            tempNode=tempNode.next;
+        }
+        head=null;
+        tail=null;
+        System.out.print("The DlL has been deleted");
+        System.out.print("\n");
+    }
+
 
 
 
