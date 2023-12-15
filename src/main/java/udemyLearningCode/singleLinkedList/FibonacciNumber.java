@@ -27,10 +27,10 @@ public class FibonacciNumber {
                 tempNode= list.head;
                 for (int i = 2; i < size; i++) {
 
-                    value+=tempNode.value;  //1
-                    list.insertLinkedList(value, i);  //1,2
-                    tempNode=tempNode.next; //1
-                    System.out.print(","+value);//1
+                    value+=tempNode.value;
+                    list.insertLinkedList(value, i);
+                    tempNode=tempNode.next;
+                    System.out.print(","+value);
 
                 }
             }
