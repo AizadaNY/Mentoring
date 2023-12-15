@@ -1,0 +1,19 @@
+package udemyLearningCode.circularDoubleLinkedList;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        CircularDoublyLinkedList cDlL=new CircularDoublyLinkedList();
+        cDlL.createCdLl(3);
+        System.out.println(cDlL.head.value);
+        cDlL.insertCdLl(7, 0);
+        cDlL.insertCdLl(19, 2);
+        System.out.println(cDlL.head.value);
+
+    }
+
+
+
+
+}
