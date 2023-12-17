@@ -56,5 +56,54 @@ public class CircularDoublyLinkedList {
 
     }
 
+    public void traverseCdLl(){
+
+        if(head!=null){
+            DoublyNode tempNode=head;
+            for (int i = 0; i < size; i++) {
+                System.out.print(tempNode.value);
+                if(i!=size-1){
+                    System.out.print("-->");
+                }
+                tempNode=tempNode.next;
+            }
+        }else {
+            System.out.println("Circular Double Linked List does not exist");
+        }
+        System.out.println("\n");
+    }
+
+
+    public void reverseTraverse(){
+
+     if(head!=null){
+         DoublyNode tempNode=tail;
+
+         for (int i = 0; i < size; i++) {
+             System.out.print(tempNode.value);
+             if(i!=size-1){
+                 System.out.print("-->");
+             }
+             tempNode=tempNode.prev;
+         }
+     }else{
+         System.out.println("Circular Double Linked List does not exist");
+     }
+        System.out.println("\n");
+
+    }
+
+    public void deleteCdLl(int location){
+
+        if(location==0){
+            head.next=null;
+            tail.next=null;
+            head=null;
+            tail=null;
+        }else if(location>=size){
+
+        }
+    }
+
 
 }
