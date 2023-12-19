@@ -15,6 +15,8 @@ public class Main {
 
         cDlL.traverseCdLl();
         cDlL.reverseTraverse();
+        cDlL.deleteCdLl(5);
+        cDlL.traverseCdLl();
     }
 
 

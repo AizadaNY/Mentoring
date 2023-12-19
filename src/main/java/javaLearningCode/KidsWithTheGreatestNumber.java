@@ -56,17 +56,5 @@ public class KidsWithTheGreatestNumber {
     }
 
 
-    /*
 
-
-
-
-
-    code code
-
-
-
-
-    jafkjdgfkkwhadewh
-     */
 }
