@@ -9,8 +9,27 @@ Given two strings str1 and str2, return the largest string x such that x divides
 
 
     public String gcdOfStrings(String str1, String str2) {
-         String word="";
+        String commonDivider="";
+        String minSizeString="";
+        String maxSizeString="";
+        if(str1.length()>str2.length()){
+            minSizeString=str2;
+            maxSizeString=str1;
+        }else {
+            minSizeString=str1;
+            maxSizeString=str2;
+        }
 
-         return word;
+            for (int i = 0; i < minSizeString.length(); i++) {
+                if(minSizeString.charAt(i)==maxSizeString.charAt(i)){
+                    commonDivider=commonDivider+minSizeString.charAt(i);
+                }else {
+                    break;
+                }
+
+            }
+
+
+         return commonDivider;
     }
 }

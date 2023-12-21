@@ -20,13 +20,15 @@ public class KidsWithTheGreatestNumber {
     public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
         List<Boolean> resultList=new ArrayList<>();
         int[] tempArray=candies;
-        Arrays.sort(tempArray);
-        int max=tempArray[candies.length-1];
+
+        Arrays.sort(candies);
         System.out.println(Arrays.toString(tempArray));
+        System.out.println(Arrays.toString(candies));
+        int max=tempArray[candies.length-1];
 
         for (int i = 0; i < candies.length; i++) {
             boolean result;
-            if((candies[i]+extraCandies)>max){
+            if((tempArray[i]+extraCandies)>=max){
                 result=true;
             }else{
                 result=false;
@@ -34,6 +36,26 @@ public class KidsWithTheGreatestNumber {
             resultList.add(result);
         }
        return resultList;
+    }
+
+    public List<Boolean> kidsWithCandies2(int[] candies, int extraCandies) {
+        List<Boolean> resultList=new ArrayList<>();
+        int max=0;
+        for (int i = 0; i < candies.length; i++) {
+            if(candies[i]>max){
+                max=candies[i];
+            }
+        }
+        for (int i = 0; i < candies.length; i++) {
+            if((max-candies[i])<=extraCandies){
+                resultList.add(true);
+            }else{
+                resultList.add(false);
+            }
+        }
+
+        return resultList;
+
     }
 
     public void test(){
@@ -46,12 +68,12 @@ public class KidsWithTheGreatestNumber {
     public static void main(String[] args) {
 
         KidsWithTheGreatestNumber kids=new KidsWithTheGreatestNumber();
-        int[] candies={3,5,8,2};
-        int extra=4;
+        int[] candies={2,3,5,1,3};
+        int extra=3;
 
 
 
-        System.out.println( kids.kidsWithCandies(candies, extra));
+        System.out.println( kids.kidsWithCandies2(candies, extra));
 
     }
 
