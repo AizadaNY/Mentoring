@@ -138,5 +138,18 @@ public class CircularDoublyLinkedList {
 
     }
 
+    public void deleteAllCdLl(){
+        DoublyNode tempNode=head;
+
+        for (int i = 0; i <size; i++) {
+            tempNode.prev=null;
+            tempNode=tempNode.next;
+        }
+        head=null;
+        tail=null;
+
+        System.out.println("Circular Doubly Linked List deleted");
+    }
+
 
 }
