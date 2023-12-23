@@ -13,6 +13,8 @@ public class ArrayProject {
         double avrTemp = 0;
 
         int[] temps = new int[numberOfDays];
+
+
         for (int i = 0; i < numberOfDays; i++) {
             System.out.println("Day " + (i + 1) + " Temperature is");
 

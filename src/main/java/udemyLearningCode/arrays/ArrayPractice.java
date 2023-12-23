@@ -11,6 +11,7 @@ public class ArrayPractice {
         array.insertToArray(5, 234);
         array.insertToArray(15, 200);
         array.insertToArray(2, 25);
+
     }
 
 }
