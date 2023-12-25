@@ -1,5 +1,7 @@
 package udemyLearningCode.LinkedListPractice;
 
+import java.util.HashSet;
+
 public class RemoveDups {
 
     /*
@@ -13,5 +15,23 @@ deleteDups(linkedList)
 1->2->3
      */
 
+    public void removeDuplicate(LinkedList list){
+        HashSet<Integer> set=new HashSet<>();
+        Node current= list.head;
+        Node prev=null;
+
+        while (current!=null){
+            int currentValue=current.value;
+            if(set.contains(currentValue)){
+                prev.next=current.next;
+                list.size--;
+            }else {
+                set.add(currentValue);
+                prev=current;
+            }
+            current=current.next;
+        }
+
+    }
 
 }

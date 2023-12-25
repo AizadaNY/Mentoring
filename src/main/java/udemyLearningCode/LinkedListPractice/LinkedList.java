@@ -32,7 +32,7 @@ public class LinkedList {
       Node tempNode=head;
       for (int i = 0; i <size; i++) {
         System.out.print(tempNode.value);
-          if(i!=size){
+          if(i!=size-1){
           System.out.print("-->");
           }
           tempNode=tempNode.next;
@@ -42,34 +42,6 @@ public class LinkedList {
 
       }
 
-       /*
-    Write a method to remove duplicates from an unsorted linked list.
-    Example
-    linkedList = 1->2->1->3
-    deleteDups(linkedList)
-    //Output
-    1->2->3
-     */
 
-    public void removeDuplicates() {
-        if (size > 2) {
-            Node tempNode = head;
-//            Node tempNodeNext = head.next;
-            for (int i = 0; i < size; i++) {
-                Node tempNodeNext=tempNode.next;
-                for (int j = 1; j < size; j++) {
-                    if(tempNode==tempNodeNext){
-                        tempNode.next=tempNode.next.next;
-                        size--;
-//                        tempNodeNext=null;
-                    }
-//                    tempNodeNext=tempNode.next.next;
-                }
-                tempNode=tempNode.next;
-            }
-
-        }
-
-    }
 
 }

@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
 
         LinkedList list=new LinkedList();
+        RemoveDups removeDups=new RemoveDups();
         list.createLl(3);
         list.insertNode(4);
         list.insertNode(9);
@@ -12,7 +13,7 @@ public class Main {
         list.insertNode(9);
         list.insertNode(1);
         list.traversal();
-        list.removeDuplicates();
+      removeDups.removeDuplicate(list);
         list.traversal();
 
 
