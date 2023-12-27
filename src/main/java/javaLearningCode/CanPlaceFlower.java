@@ -21,30 +21,26 @@ Output: false
     public static void main(String[] args) {
         CanPlaceFlower flower = new CanPlaceFlower();
         int[] flowerbed = {1, 0, 0, 0, 1};
-        int n = 1;
+        int n = 2;
         flower.canPlaceFlowers(flowerbed, n);
     }
 
     public boolean canPlaceFlowers(int[] flowerbed, int n) {
-        int i=0;
-        boolean flower=false;
-        while (n > 0 || i < flowerbed.length) {
-            if (flowerbed[i] == 1) {
-                i = i + 2;
-            } else {
-                if ((i + 1) != 1) {
-                    n--;
-                }
-
+        int leftPointer = 0;
+        int currentPointer = flowerbed[0];
+        int count=0;
+        for (int rightPointer = 1; rightPointer < flowerbed.length; rightPointer++) {
+            if (currentPointer== 0 && currentPointer == leftPointer && currentPointer==flowerbed[rightPointer]) {
+                count++;
+                leftPointer=1;
+            }else{
+                leftPointer=currentPointer;
             }
-            i++;
+            currentPointer=flowerbed[rightPointer];
         }
-        if(n==0){
-            flower=true;
-        }else {
-            flower=false;
+        if(leftPointer==0 && leftPointer==currentPointer){
+            count++;
         }
-        System.out.println(flower);
-         return flower;
+        return count>=n;
     }
 }
