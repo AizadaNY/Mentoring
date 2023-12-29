@@ -32,18 +32,50 @@ public class SingleLinkedListPush {
         }
     }
 
-    // Insert Method SinglyLinkedList
+
+
+
+
+
+
+
+
+
+
+
+
+
     public void push(int nodeValue) {
-        if (head == null) {
-            insertSinglyLinkedList(nodeValue);
-            return;
-        } else {
-            Node node = new Node();
-            node.value = nodeValue;
-            node.next = null;
-            tail.next = node;
-            tail = node;
+        if(head==null){
+            pushSlL(nodeValue);
+        }else{
+            Node newNode=new Node();
+            newNode.value=nodeValue;
+            newNode.next=null;
+            tail.next=newNode;
+            tail=newNode;
             size++;
         }
+    }
+
+
+    public Node pop() {
+        if(head==null) {
+            System.out.println("The Single Linked List does not exist");
+            return null;
+        }
+        Node removeNode;
+        Node currentNode;
+        if(head==tail){
+           removeNode=head;
+           head=tail=null;
+        }else{
+            currentNode=head;
+           while (currentNode.next!=tail){
+               currentNode=currentNode.next;
+
+           }
+        }
+    }
 
 }
