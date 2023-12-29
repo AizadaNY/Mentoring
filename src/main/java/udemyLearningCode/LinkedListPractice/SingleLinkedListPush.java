@@ -32,4 +32,18 @@ public class SingleLinkedListPush {
         }
     }
 
+    // Insert Method SinglyLinkedList
+    public void push(int nodeValue) {
+        if (head == null) {
+            insertSinglyLinkedList(nodeValue);
+            return;
+        } else {
+            Node node = new Node();
+            node.value = nodeValue;
+            node.next = null;
+            tail.next = node;
+            tail = node;
+            size++;
+        }
+
 }
