@@ -75,7 +75,12 @@ public class SingleLinkedListPush {
                currentNode=currentNode.next;
 
            }
+           removeNode=currentNode.next;
+           currentNode.next=null;
+           tail=currentNode;
+           size--;
         }
+        return removeNode;
     }
 
 }
