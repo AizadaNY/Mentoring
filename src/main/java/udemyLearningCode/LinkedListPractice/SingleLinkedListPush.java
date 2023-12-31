@@ -34,17 +34,6 @@ public class SingleLinkedListPush {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
     public void push(int nodeValue) {
         if(head==null){
             pushSlL(nodeValue);
@@ -81,6 +70,40 @@ public class SingleLinkedListPush {
            size--;
         }
         return removeNode;
+    }
+
+    /*
+    Insert
+This function should insert a node at a specified index in a  SinglyLinkedList.
+It should return true if the index is valid, and false if the index is invalid
+(less than 0 or greater the length of the list).
+     */
+
+    public boolean insert(int data, int index) {
+       Boolean success=false;
+        Node newNode=new Node();
+        newNode.value=data;
+        if(head==null){
+            push(data);
+            success=true;
+
+        }else{
+            Node tempNode=head;
+
+            for (int i = 0; i < index; i++) {
+                tempNode=tempNode.next;
+            }
+            if(tempNode.next==null){
+
+                tempNode.next=newNode;
+                tail.next=newNode;
+                tail=newNode;
+                newNode.next=null;
+                success=true;
+            }
+        }
+        System.out.println(success);
+        return success;
     }
 
 }
