@@ -1,4 +1,4 @@
-package udemyLearningCode.LinkedListPractice;
+package udemyLearningCode.linkedListPractice;
 
 import java.util.HashSet;
 

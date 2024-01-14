@@ -1,4 +1,4 @@
-package udemyLearningCode.LinkedListPractice;
+package udemyLearningCode.linkedListPractice;
 
 public class LinkedList {
 
