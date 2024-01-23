@@ -1,5 +1,7 @@
 package javaLearningCode.LinkedListProblems;
 
+import javaLearningCode.LinkedListProblems.ListNode;
+
 public class ReverseLinkedList {
 
     /*
