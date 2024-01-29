@@ -1,5 +1,7 @@
 package javaLearningCode.LinkedListProblems;
 
+import java.util.List;
+
 public class PalindromeLinkedList {
 
 /*
@@ -12,21 +14,14 @@ palindrome
     //1 2 2 3 1  false
     //1 2      false
     public boolean isPalindrome(ListNode head) {
-        int count=0;
-        ListNode node=head;
-        ListNode secondNode=null;
-        while (node.next!=null){
-            if(node.val==node.next.val){
-                secondNode=node.next;
-                node.next=null;
-                while (secondNode.next!=null){
 
-                    secondNode.next;
-                }
-            }else{
-                node=node.next;
-                count++;
-            }
+        ListNode slow=head;
+        ListNode fast=head;
+
+        while (fast.next!=null&&fast!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+        }
         }
 
 
