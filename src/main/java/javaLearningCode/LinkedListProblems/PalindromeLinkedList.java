@@ -13,28 +13,22 @@ palindrome
     //1 2 3 3 2 1 true
     //1 2 2 3 1  false
     //1 2      false
-    public boolean isPalindrome(ListNode head) {
-
-        ListNode slow=head;
-        ListNode fast=head;
-
-        while (fast.next!=null&&fast!=null){
-            slow=slow.next;
-            fast=fast.next.next;
-        }
-        }
-
-
-
-
-
-    }
-
-    public static void main(String[] args) {
+//    public boolean isPalindrome(ListNode head) {
+//
+//        ListNode slow=head;
+//        ListNode fast=head;
+//
+//        while (fast.next!=null&&fast!=null){
+//            slow=slow.next;
+//            fast=fast.next.next;
+//        }
+//        }
+//
 
 
 
 
 
-    }
+
+
 }
