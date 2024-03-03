@@ -7,16 +7,20 @@ public class StringReverser {
 //word
     public static void main(String[] args) {
         String input=getUserInput();
-        String reversedString="";
-
-        for (int i = input.length()-1; i>=0 ; i--) {
-            reversedString+=input.charAt(i);
-        }
-
+        String reversedString=reverseString(input);
         System.out.println(reversedString);
 
     }
 
+    public static String reverseString(String input){
+        String reversedString="";
+        for (int i = input.length()-1; i>=0 ; i--) {
+            reversedString+=input.charAt(i);
+        }
+
+        return reversedString;
+
+    }
 
     public static String getUserInput(){
         String input="";
