@@ -16,7 +16,7 @@ public class FactorialCalculator {
 
     }
 
-    public static int calculateFactorial(int number){
+    public static int calculateFactorial(Integer number){
 
         if(number>1) {
            number=number * calculateFactorial(number - 1);
@@ -37,12 +37,13 @@ public class FactorialCalculator {
     }
 
     public static int calculateFactorialLoop(int number){
-        int result=1;
+        Integer result=1;
+
         for (int i = 1; i <=number ; i++) {
             result*=i;
         }
         return result;
     }
-    //1*4     4*3    12*2    24*1
+
 
 }
