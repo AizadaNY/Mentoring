@@ -1,4 +1,4 @@
-package programTasks;
+package programTasks.toDoList;
 
 import udemyLearningCode.arrays.ArrayList;
 
@@ -15,17 +15,10 @@ public class ToDoList {
 
     }
 
-    ArrayList taskList=new ArrayList();
 
 
-    public void addTask(){
-
-    }
 
 
-    public void deleteTask(){
-
-    }
 
     public void viewTasks(){
 
