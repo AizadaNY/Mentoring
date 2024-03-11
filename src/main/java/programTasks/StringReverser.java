@@ -11,11 +11,11 @@ public class StringReverser {
     }
 
     public static String reverseString(String input) {
-        String reversedString = "";
+        StringBuffer reversedString = new StringBuffer();
         for (int i = input.length() - 1; i >= 0; i--) {
-            reversedString += input.charAt(i);
+            reversedString.append(input.charAt(i));
         }
-        return reversedString;
+        return reversedString.toString();
     }
 
     public static String getUserInput() {
