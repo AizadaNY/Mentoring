@@ -4,19 +4,19 @@ public class Account {
 
     private Double balance;
 
-    public double getBalance() {
+    public Double getBalance() {
         return balance;
     }
 
-    public void setBalance(double balance) {
+    public void setBalance(Double balance) {
         this.balance = balance;
     }
 
-    public void deposit(double sum) {
+    public void deposit(Double sum) {
         balance = balance + sum;
     }
 
-    public void withdraw(double sum) {
+    public void withdraw(Double sum) {
         if (balance > sum) {
             balance = balance - sum;
         } else {

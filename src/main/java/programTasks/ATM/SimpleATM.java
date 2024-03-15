@@ -12,12 +12,15 @@ public class SimpleATM {
 
 
     public static void main(String[] args) {
-        SimpleATM atm = new SimpleATM();
-        atm.operation();
-        while (atm.choice() == 1) {
-            atm.operation();
+        AccountOperations accountOperations=new AccountOperations();
+        Customer customer=new Customer();
+        accountOperations.updateBalance();
+        while (customer.choice()== Customer.getContinueYes()) {
+            accountOperations.updateBalance();
         }
     }
+
+
 
 
 
