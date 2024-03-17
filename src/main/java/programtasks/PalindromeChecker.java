@@ -3,8 +3,8 @@ package programtasks;
 public class PalindromeChecker {
 
     public static void main(String[] args) {
-        String input = StringReverser.getUserInput();
-        Boolean result = check(input);
+
+        Boolean result = check(CommonMethods.getUserInput("Please provide any word"));
         System.out.println(result);
     }
 

@@ -7,11 +7,18 @@ public class TaskList {
 
     List<Tasks> list = new ArrayList<>();
 
-    public void addTask(Tasks name) {
-       list.add(name);
+    public void addTask(String name,String time) {
+
+        Tasks task=new Tasks(name,time);
+        list.add(task);
     }
 
-    public void deleteTask() {
+    public void deleteTask(String name) {
 
     }
+
+    public void deleteTask(int number){
+
+    }
+
 }

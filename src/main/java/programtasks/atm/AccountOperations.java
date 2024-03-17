@@ -12,15 +12,15 @@ public class AccountOperations {
 
     public void updateBalance() {
 
-        int option = CommonMethods.input("Please select operation  \n1.Balance \n2.Deposit Money\n3.Withdraw money");
+        int option = CommonMethods.getUserInput("Please select operation  \n1.Balance \n2.Deposit Money\n3.Withdraw money");
 
         if (option == BALANCE) {
             System.out.println("Your balance is " + account.getBalance());
         } else if (option == DEPOSIT_MONEY) {
-            account.deposit(CommonMethods.input("Deposit amount: "));
+            account.deposit(CommonMethods.getUserInput("Please enter deposit amount: "));
             System.out.println("Deposit sum");
         } else if (option == WITHDRAW_MONEY) {
-            account.withdraw(CommonMethods.input("Withdraw amount: "));
+            account.withdraw(CommonMethods.getUserInput("Please enter withdraw amount: "));
             System.out.println("Withdraw sum");
         }
 
