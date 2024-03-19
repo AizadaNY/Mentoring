@@ -13,23 +13,11 @@ public class ToDoList {
 
     public static void main(String[] args) {
 
-        while (){
-            UserOptions options=new UserOptions();
+        while (UserOptions.addMore) {
+            UserOptions options = new UserOptions();
             options.selectOption(CommonMethods.getUserInput("Select option"));
         }
-
     }
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

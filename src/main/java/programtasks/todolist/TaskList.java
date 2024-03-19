@@ -7,9 +7,9 @@ public class TaskList {
 
     List<Tasks> list = new ArrayList<>();
 
-    public void addTask(String name,String time) {
+    public void addTask(String name, String time) {
 
-        Tasks task=new Tasks(name,time);
+        Tasks task = new Tasks(name, time);
         list.add(task);
     }
 
@@ -18,9 +18,9 @@ public class TaskList {
 
     }
 
-    public void deleteTask(int number){
+    public void deleteTask(int number) {
 
-        list.remove(number-1);
+        list.remove(number - 1);
     }
 
 }
