@@ -1,5 +1,7 @@
 package programtasks.todolist;
 
+import programtasks.CommonMethods;
+
 public class ToDoList {
 
     /*
@@ -11,17 +13,18 @@ public class ToDoList {
 
     public static void main(String[] args) {
 
-    }
-
-
-
-
-
-
-    public void viewTasks(){
-
+        while (){
+            UserOptions options=new UserOptions();
+            options.selectOption(CommonMethods.getUserInput("Select option"));
+        }
 
     }
+
+
+
+
+
+
 
 
 

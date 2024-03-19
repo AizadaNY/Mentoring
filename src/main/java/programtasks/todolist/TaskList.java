@@ -15,10 +15,12 @@ public class TaskList {
 
     public void deleteTask(String name) {
 
+
     }
 
     public void deleteTask(int number){
 
+        list.remove(number-1);
     }
 
 }
