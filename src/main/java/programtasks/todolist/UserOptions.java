@@ -2,6 +2,8 @@ package programtasks.todolist;
 
 import programtasks.CommonMethods;
 
+import java.text.ParseException;
+
 public class UserOptions {
 
     private final int ADD_TASK = 1;
@@ -11,13 +13,16 @@ public class UserOptions {
 
     public static boolean addMore = true;
 
-    public void selectOption(int option) {
+    public void selectOption(int option) throws ParseException {
 
         TaskList taskList = new TaskList();
         ViewTasks viewTasks = new ViewTasks();
 
         if (option == ADD_TASK) {
-            taskList.addTask(CommonMethods.getUserInput("Task Name: "), CommonMethods.getUserInput("Task end time: "));
+            taskList.addTask(CommonMethods.getUserInput("Task Name: "),
+                    CommonMethods.getUserInput("Task complete time: "),
+                    CommonMethods.getUserInput("Task description: "),
+            CommonMethods.getUserInput("Enter date: "));
         } else if (option == DELETE_TASK) {
             taskList.deleteTask(CommonMethods.getUserInput("Task number: "));
         } else if (option == VIEW_ALL_TASKS) {

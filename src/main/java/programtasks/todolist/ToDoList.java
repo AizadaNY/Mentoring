@@ -2,6 +2,8 @@ package programtasks.todolist;
 
 import programtasks.CommonMethods;
 
+import java.text.ParseException;
+
 public class ToDoList {
 
     /*
@@ -11,7 +13,7 @@ public class ToDoList {
 
      */
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
 
         while (UserOptions.addMore) {
             UserOptions options = new UserOptions();
