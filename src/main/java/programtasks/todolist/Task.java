@@ -1,11 +1,14 @@
 package programtasks.todolist;
 
-public class Tasks {
+public class Task {
 
     private String title;
     private String time;
+    //id
+    //description
+    //
 
-    public Tasks(String title, String time) {
+    public Task(String title, String time) {
         this.title = title;
         this.time = time;
     }

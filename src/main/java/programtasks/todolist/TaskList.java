@@ -5,17 +5,12 @@ import java.util.List;
 
 public class TaskList {
 
-    List<Tasks> list = new ArrayList<>();
+    List<Task> list = new ArrayList<>();
 
     public void addTask(String name, String time) {
 
-        Tasks task = new Tasks(name, time);
+        Task task = new Task(name, time);
         list.add(task);
-    }
-
-    public void deleteTask(String name) {
-
-
     }
 
     public void deleteTask(int number) {
