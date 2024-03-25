@@ -6,28 +6,28 @@ import java.text.ParseException;
 
 public class UserOptions {
 
-    private final int ADD_TASK = 1;
-    private final int DELETE_TASK = 2;
-    private final int VIEW_ALL_TASKS = 3;
-    private final int EXIT = 0;
+    private final String ADD_TASK = "1";
+    private final String DELETE_TASK = "2";
+    private final String VIEW_ALL_TASKS = "3";
+    private final String EXIT = "0";
 
     public static boolean addMore = true;
 
-    public void selectOption(int option) throws ParseException {
+    public void selectOption(String option) throws ParseException {
 
         TaskList taskList = new TaskList();
         ViewTasks viewTasks = new ViewTasks();
 
-        if (option == ADD_TASK) {
+        if (option.equalsIgnoreCase(ADD_TASK)) {
             taskList.addTask(CommonMethods.getUserInput("Task Name: "),
                     CommonMethods.getUserInput("Task complete time: "),
                     CommonMethods.getUserInput("Task description: "),
             CommonMethods.getUserInput("Enter date: "));
-        } else if (option == DELETE_TASK) {
+        } else if (option.equalsIgnoreCase(DELETE_TASK)) {
             taskList.deleteTask(CommonMethods.getUserInput("Task number: "));
-        } else if (option == VIEW_ALL_TASKS) {
+        } else if (option.equalsIgnoreCase(VIEW_ALL_TASKS)) {
             viewTasks.printTasks();
-        } else if (option == EXIT) {
+        } else if (option.equalsIgnoreCase(EXIT)) {
             addMore = false;
         }
     }

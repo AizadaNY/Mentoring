@@ -13,9 +13,8 @@ public class TaskList {
         list.add(task);
     }
 
-    public void deleteTask(int number) {
-
-        list.remove(number - 1);
+    public void deleteTask(int id ){
+        list.remove(id - 1);
     }
 
 }
