@@ -8,8 +8,8 @@ public class TaskList {
 
     List<Task> list = new ArrayList<>();
 
-    public void addTask(String name, String time,String desc,String compDate) throws ParseException {
-        Task task = new Task(name, time,desc,compDate);
+    public void addTask(String name, String time,String desc) throws ParseException {
+        Task task = new Task(name,time,desc);
         list.add(task);
     }
 

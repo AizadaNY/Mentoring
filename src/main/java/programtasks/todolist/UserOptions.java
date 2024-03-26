@@ -20,9 +20,8 @@ public class UserOptions {
 
         if (option.equalsIgnoreCase(ADD_TASK)) {
             taskList.addTask(CommonMethods.getUserInput("Task Name: "),
-                    CommonMethods.getUserInput("Task complete time: "),
-                    CommonMethods.getUserInput("Task description: "),
-            CommonMethods.getUserInput("Enter date: "));
+                    CommonMethods.getUserInput("Task complete time in 'MM/dd/yyyy' format: "),
+                    CommonMethods.getUserInput("Task description: "));
         } else if (option.equalsIgnoreCase(DELETE_TASK)) {
             taskList.deleteTask(CommonMethods.getUserInput("Task number: "));
         } else if (option.equalsIgnoreCase(VIEW_ALL_TASKS)) {

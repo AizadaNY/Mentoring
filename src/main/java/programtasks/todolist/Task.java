@@ -10,13 +10,13 @@ public class Task {
     private static int id=0;
     private String description;
 
-    public Task(String title, String completeTime,String description,String completeDate) throws ParseException {
+    public Task(String title, String completeTime,String description) throws ParseException {
         this.title = title;
         this.completeTime =completeTime;
         this.description=description;
         id=id++;
         createdTime=GetDate.getCurrentDate().toString();
-        completeTime=GetDate.getCompleteDate(completeDate).toString();
+        completeTime=GetDate.getCompleteDate(completeTime).toString();
     }
 
     public String getTitle() {

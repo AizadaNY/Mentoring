@@ -1,33 +1,22 @@
-section	.text
-   global _start        ;must be declared for using gcc
+section .data
+    num1    dd 3           ; First number
+    num2    dd 5           ; Second number
+    sum     dd 0            ; Variable to store the sum
 
-_start:	                ;tell linker entry point
-   sub     ah, ah
-   mov     al, '5'
-   sub     al, '3'
-   ;aas
-   or      al, 30h
-   mov     [res], eax
+section .text
+    global _start
 
-
-   mov	edx,len	        ;message length
-   mov	ecx,msg	        ;message to write
-   mov	ebx,1	        ;file descriptor (stdout)
-   mov	eax,4	        ;system call number (sys_write)
-   int	0x80	        ;call kernel
-
-   mov	edx,1	        ;message length
-   mov	ecx,res	        ;message to write
-   mov	ebx,1	        ;file descriptor (stdout)
-   mov	eax,4	        ;system call number (sys_write)
-   int	0x80	        ;call kernel
-
-   mov	eax,1	        ;system call number (sys_exit)
-   int	0x80	        ;call kernel
-
-section	.data
-msg db 'The Result is:',10
-len equ $ - msg
-
-section .bss
-res resb 1
+_start:
+    ; Load the first number into EAX
+    mov eax, [num1]
+    
+    ; Add the second number to EAX
+    add eax, [num2]
+    
+    ; Store the result in the sum variable
+    mov [sum], eax
+    
+    ; Exit the program
+    mov eax, 1            ; syscall number for exit
+    xor ebx, ebx          ; exit code 0
+    int 80h               ; invoke syscall

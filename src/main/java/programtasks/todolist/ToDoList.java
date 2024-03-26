@@ -17,9 +17,11 @@ public class ToDoList {
 
         while (UserOptions.addMore) {
             UserOptions options = new UserOptions();
-            options.selectOption(CommonMethods.getUserInput("Select option"));
+            options.selectOption(CommonMethods.getUserInput(Messages.selectOptionMsg));
         }
     }
 
+
+    //view not working
 
 }
