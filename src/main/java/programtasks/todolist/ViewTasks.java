@@ -6,7 +6,7 @@ public class ViewTasks {
 
         TaskList taskList = new TaskList();
 
-        System.out.println(taskList.list);
+        System.out.println(taskList.list.get(0));
     }
 
 
