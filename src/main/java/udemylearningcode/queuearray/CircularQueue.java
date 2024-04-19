@@ -17,7 +17,7 @@ public class CircularQueue {
         System.out.println("Circular queue successfully created with size " + size);
     }
 
-    public boolean isEmpty(int value) {
+    public boolean isEmpty() {
         if (topOfTheQueue == -1) {
             return true;
         } else {
@@ -36,21 +36,58 @@ public class CircularQueue {
     }
 
     public void enQueue(int value) {
-        if(isFull(value)){
+        if (isFull(value)) {
             System.out.println("Circular Queue is full");
-        }else if(isEmpty(value)){
-            beginningOfQueue=0;
+        } else if (isEmpty()) {
+            beginningOfQueue = 0;
             topOfTheQueue++;
-            arr[topOfTheQueue]=value;
+            arr[topOfTheQueue] = value;
             System.out.println("Value successfully inserted");
-        }else{
-            if(topOfTheQueue+1==size){
-                topOfTheQueue=0;
-            }else{
+        } else {
+            if (topOfTheQueue + 1 == size) {
+                topOfTheQueue = 0;
+            } else {
                 topOfTheQueue++;
             }
-            arr[topOfTheQueue]=value;
+            arr[topOfTheQueue] = value;
             System.out.println("Value successfully inserted");
         }
     }
+
+    //deque   delete first element
+    public int deQueue() {
+        if (isEmpty()) {
+            System.out.println("The queue is empty");
+            return -1;
+        } else {
+            int result = arr[beginningOfQueue];
+            arr[beginningOfQueue] = 0;
+            if (beginningOfQueue == topOfTheQueue) {
+                beginningOfQueue = topOfTheQueue = -1;
+            } else if (beginningOfQueue + 1 == size) {
+                beginningOfQueue = 0;
+            } else {
+                beginningOfQueue++;
+            }
+            return result;
+        }
+    }
+
+    //get first element
+    public int peek() {
+        if (isEmpty()) {
+            System.out.println("The circular queue is empty");
+            return -1;
+        } else {
+            return arr[beginningOfQueue];
+        }
+    }
+
+//delete dequeue
+    public void deleteQueue(){
+        arr=null;
+        System.out.println("The dequeue successfully deleted");
+    }
+
+
 }
