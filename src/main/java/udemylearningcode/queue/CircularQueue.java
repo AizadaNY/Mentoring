@@ -1,6 +1,4 @@
-package udemylearningcode.queuearray;
-
-import java.lang.reflect.Array;
+package udemylearningcode.queue;
 
 public class CircularQueue {
 

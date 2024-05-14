@@ -1,4 +1,4 @@
-package udemylearningcode.queuearray;
+package udemylearningcode.queue;
 
 public class QueueArray {
 
