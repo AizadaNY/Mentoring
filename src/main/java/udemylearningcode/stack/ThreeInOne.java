@@ -30,6 +30,8 @@ public class ThreeInOne {
     }
 
     private int indexOfTop(int stackNumber){
-        int offset=
+        int offset=stackNumber*stackCapacity;
+        int size=sizes[stackNumber];
+        return offset+size-1;
     }
 }
